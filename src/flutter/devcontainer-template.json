@@ -1,0 +1,30 @@
+{
+    "id": "flutter",
+    "version": "0.0.2",
+    "name": "Flutter",
+    "description": "Templated flutter development environment",
+    "documentationURL": "https://github.com/RobertLD/flutter-devcontainer/tree/main/src/flutter",
+    "licenseURL": "https://github.com/RobertLD/flutter-devcontainer/blob/main/LICENSE",
+    "options": {
+        "imageVariant": {
+            "type": "string",
+            "description": "Ubuntu version:",
+            "proposals": [
+                "jammy",
+                "focal"
+            ],
+            "default": "jammy"
+        },
+        "sdkVersion": {
+            "type": "string",
+            "description": "Choose the Flutter SDK version to install.",
+            "proposals": [
+                "3.24.2"
+            ],
+            "default": "3.24.2"
+        }
+    },
+    "platforms": [
+        "Any"
+    ]
+}

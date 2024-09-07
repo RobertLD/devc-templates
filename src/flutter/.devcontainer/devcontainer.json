@@ -1,0 +1,24 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/ubuntu
+{
+	"name": "Flutter",
+	"build": {
+        // Path is relative to the devcontainer.json file.
+        "dockerfile": "Dockerfile",
+		"args": {
+			"imageVariant": "${templateOption:imageVariant}",
+			"sdkVersion": "${templateOption:sdkVersion}"
+
+		}
+    },
+	"customizations": {
+        // Configure properties specific to VS Code.
+        "vscode": {
+            // Add the IDs of extensions you want installed when the container is created.
+            "extensions": [
+				"ms-azuretools.vscode-docker",
+				"Dart-Code.flutter"
+			]
+		}
+	} 
+}
