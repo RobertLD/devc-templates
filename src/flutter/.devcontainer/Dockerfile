@@ -21,7 +21,8 @@ RUN apt-get update \
     libbz2-1.0:amd64 \
     libncurses5:amd64 \
     wget \ 
-    unzip
+    unzip \ 
+    cmake
 
 
 RUN wget https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/flutter_linux_${sdkVersion}-stable.tar.xz
