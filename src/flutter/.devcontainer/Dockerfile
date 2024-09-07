@@ -1,8 +1,9 @@
+ARG imageVariant=${imageVariant}
 FROM mcr.microsoft.com/devcontainers/base:${imageVariant}
 
 # Avoid warnings by switching to noninteractive
 ARG DEBIAN_FRONTEND=noninteractive
-ARG FLUTTER_SDK_VERSION=${sdkVersion}
+ARG sdkVersion=${sdkVersion}
 RUN apt-get install -y
 
 
@@ -23,6 +24,6 @@ RUN apt-get update \
     unzip
 
 
-RUN wget https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/flutter_linux_${FLUTTER_SDK_VERSION}-stable.tar.xz
-RUN tar -xf flutter_linux_3.24.2-stable.tar.xz -C /usr/local
+RUN wget https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/flutter_linux_${sdkVersion}-stable.tar.xz
+RUN tar -xf flutter_linux_${sdkVersion}-stable.tar.xz -C /usr/local
 ENV PATH="${PATH}:/usr/local/flutter/bin"
