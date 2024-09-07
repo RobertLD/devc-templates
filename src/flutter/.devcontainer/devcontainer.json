@@ -3,22 +3,21 @@
 {
 	"name": "Flutter",
 	"build": {
-        // Path is relative to the devcontainer.json file.
-        "dockerfile": "Dockerfile",
+		// Path is relative to the devcontainer.json file.
+		"dockerfile": "Dockerfile",
 		"args": {
-			"imageVariant": "${templateOption:imageVariant}",
-			"sdkVersion": "${templateOption:sdkVersion}"
-
+			"imageVariant": "jammy",
+			"flutterSdkVersion": "3.24.2"
 		}
-    },
+	},
 	"customizations": {
-        // Configure properties specific to VS Code.
-        "vscode": {
-            // Add the IDs of extensions you want installed when the container is created.
-            "extensions": [
+		// Configure properties specific to VS Code.
+		"vscode": {
+			// Add the IDs of extensions you want installed when the container is created.
+			"extensions": [
 				"ms-azuretools.vscode-docker",
 				"Dart-Code.flutter"
 			]
 		}
-	} 
+	}
 }
